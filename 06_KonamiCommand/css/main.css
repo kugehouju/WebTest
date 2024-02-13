@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+.text {
+    font-size: 200px;
+}
+
+.text.rainbow {
+    animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+    0%,100% {
+        color: #ff1493;
+    }
+
+    25% {
+        color: #7fff00;
+    }
+
+    50% {
+        color: #0091EA;
+    }
+
+    75% {
+        color: #9400d3;
+    }
+}

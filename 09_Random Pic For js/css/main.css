@@ -1,0 +1,14 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 185px); /* 各列の幅を120pxに固定 */
+    grid-auto-rows: 185px; /* 各行の高さを120pxに固定 */
+    grid-gap: 10px; /* 画像間のスペースを10pxに設定 */
+    margin-bottom: 10px;
+}
+.grid-item img {
+    width: 100%; /* 画像の横幅を親要素に合わせる */
+    height: 100%; /* 画像の高さを親要素に合わせる */
+    margin: 5px;
+    object-fit: cover;
+    border-radius: 10px;
+}

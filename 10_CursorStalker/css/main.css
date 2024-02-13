@@ -1,0 +1,27 @@
+body {
+	background-color: #fcfcfc;
+	background-image: radial-gradient(#e0e0e0 10%, transparent 20%), radial-gradient(#e0e0e0 10%, transparent 20%);
+	background-position: 0 0, 10px 10px;
+	background-size: 10px 10px;
+}
+
+#firstText {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+#cursor-stalker {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* カーソルとして機能させるためにクリックを無視 */
+    z-index: 10000; /* 他の要素の上に表示 */
+    transition: transform 0.2s ease; /* 滑らかな動きを実現 */
+    mix-blend-mode: difference;
+}

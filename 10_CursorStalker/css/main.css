@@ -1,8 +1,11 @@
 body {
-	background-color: #fcfcfc;
+    background-color: #fcfcfc;
 	background-image: radial-gradient(#e0e0e0 10%, transparent 20%), radial-gradient(#e0e0e0 10%, transparent 20%);
 	background-position: 0 0, 10px 10px;
 	background-size: 10px 10px;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
 #firstText {
@@ -11,6 +14,16 @@ body {
     left: 20%;
     transform: translate(-50%, -50%);
     font-size: 1rem;
+}
+
+#firstText h1 {
+    font-size: 64px;
+    line-height: 0;
+}
+
+#firstText h2 {
+    font-size: 32px;
+    margin-top: 20px;
 }
 
 #cursor-stalker {
@@ -22,6 +35,50 @@ body {
     transform: translate(-50%, -50%);
     pointer-events: none; /* カーソルとして機能させるためにクリックを無視 */
     z-index: 10000; /* 他の要素の上に表示 */
-    transition: transform 0.2s ease; /* 滑らかな動きを実現 */
+    transition: transform 0.3s ease; /* 滑らかな動きを実現 */
     mix-blend-mode: difference;
 }
+
+.scrolling_text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    position: fixed;
+    bottom: 0;
+    user-select: none;
+}
+
+.text {
+    font-size: 80px;
+    font-weight: 700;
+    animation: animate_text 30s linear infinite;
+}
+
+.text span {
+    margin: 0 40px;
+}
+
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+
+.shine-text span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

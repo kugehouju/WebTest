@@ -23,3 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mousemove', mouseMoveHandler);
     animate(); // アニメーションを開始します。
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const spans = document.querySelectorAll('.shine-text span');
+    spans.forEach((span, index) => {
+      // アニメーション適用の遅延を設定
+      span.style.animationDelay = `${index * 0.5}s`;
+    });
+  });

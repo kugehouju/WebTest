@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイピングゲーム</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        #word {
+            font-size: 2em;
+            margin: 20px;
+        }
+        #inputField {
+            font-size: 1.5em;
+            padding: 10px;
+            width: 300px;
+        }
+        #score {
+            margin: 20px;
+        }
+        #time {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>タイピングゲーム</h1>
+    <div id="word"></div>
+    <input type="text" id="inputField" autofocus>
+    <div id="score">スコア: 0</div>
+    <div id="time">時間: 60秒</div>
+    <script src="script.js"></script>
+</body>
+</html>
